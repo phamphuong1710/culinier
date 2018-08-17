@@ -1,0 +1,280 @@
+
+*{
+	margin: 0;
+	padding:0;
+	font-family: Dosis;
+}
+.header{
+	color:#fff;
+	.head_menu{
+		height:100px;
+		background-color:#232323;
+		position: relative;
+		
+		.logo{
+			text-align: center;
+		}
+		b{
+			font-size:60px;
+			font-family: "Yellowtail";
+		}
+		ul{
+			list-style-type: none;
+			margin-top: 40px;
+		}
+		li{
+			display: inline;
+			padding-right: 15px;
+		}
+		a{
+			color:#fff;
+			font-size: 16px;
+		}
+		a:hover{
+			text-decoration: none;
+		}
+		.search{
+			text-align: right;
+    		padding-right: 10px;
+			height: 48px;
+			width: 48px;
+			background-image: url(image/search.png);
+			position: absolute;
+			right: 0;
+			top: 0;
+			font-size: 16px;
+			button{
+				    background: none;
+				    border: none;
+			}
+		}
+	}
+	.head_title{
+		width: 100%;
+		height: 230px;
+		text-align: center;
+		padding-top: 80px;
+		background-image: url(image/titlebg.png);
+		b{
+			font-size: 30px;
+		}
+		a{
+			font-size: 14px;
+			font-family: "Georgia";
+			font-style: italic;
+			color: #fff;
+		}
+	}
+}
+
+.content{
+	width: 100%;
+	margin-top: 40px;
+	@mixin head($url){
+			height: 117px;
+			text-align: center;
+			color: #fff;
+			background-image: url($url);
+			
+	}
+	@mixin cont($url,$h){
+		background-image: url($url);
+		background-repeat: no-repeat;
+		height: $h;
+		margin-bottom: 30px;
+	}
+	@mixin time($s,$c,$w,$a){
+		font-size: $s;
+		color: $c;
+		width: $w;
+		text-align: $a;
+	}
+	@mixin title(){
+		font-size: 36px;
+		color: #333;
+	}
+	@mixin auther(){
+		font-size: 14px;
+		color: #666;
+		text-align: center;
+		padding-top:10px;
+	}
+	@mixin content(){
+		font-size: 16px;
+		color: #999;
+		padding-top: 15px;
+		padding-bottom: 30px;;
+	}
+	@mixin social(){
+		font-size: 14px;
+		color: #333;
+		width: 100%;
+		text-align: center;
+	}
+	@mixin wave(){
+		margin: 34px auto;
+		display: block;
+	}
+	.time{
+		@include time(14px,#ff9933,100,center);
+	}
+	.title{
+		@include title();
+	}	
+	.auther{
+		@include auther();
+	}
+	.content{
+		@include content();
+	}
+	.social{
+		@include social();
+		a{
+			color: #666;
+			padding-right: 20px;
+		}
+		ul{
+				list-style-type: none;
+
+		}
+		li{
+			display: inline;
+		}
+		.share{
+			position: relative;
+		    display: inline-block;
+		    .tooltiptext {
+				visibility: hidden;
+				width: 220px;
+				background-color: #fff;
+				color: #333333;
+				text-align: center;
+				border-radius: 50px;
+				padding: 5px 0;
+				border:1px solid #999999;
+				position: absolute;
+				z-index: 1;
+				bottom: 100%;
+				left: -130%;
+				a{
+					padding: 0 5px;
+				}
+			}
+		 	.tooltiptext::after {
+			    content: "";
+			    position: absolute;
+			    top: 100%;
+			    left: 50%;
+			    margin-left: -5px;
+			    border-width: 5px;
+			    border-style: solid;
+			    border-color: #999 transparent transparent transparent;
+			}
+		}
+		.share:hover .tooltiptext {
+		    visibility: visible;
+		}
+	}
+	.wave img{
+		@include wave();
+	}
+	
+	.camera{
+		width: 92%;
+		.head{
+
+			@include head("image/bg1.png");
+			padding-top: 30px;
+		}
+		.cont{
+			@include cont("image/camerabg2.png",500px);
+		}
+	}
+	.photography{
+		width: 92%;
+		.head{
+			@include head("image/bg2.png");
+		}
+		.cont{
+			height: 172px;
+			background-image: url(image/photobg.png);
+			font-size: 30px;
+			font-weight: bold;
+			text-align: center;
+			margin-bottom: 30px;
+			a{
+				color:#333;
+				text-decoration: underline;
+			}
+		}
+		
+
+	}
+	.music{
+		width: 92%;
+		.head{
+			@include head("image/bg3.png");
+			padding-top: 20px;
+		}
+		.cont{
+			background-image: url(image/musicbg.png);
+			height:157px;
+		}
+	}
+	.status{
+		width: 92%;
+		.head{
+			@include head("image/status.png");
+			padding-top: 20px;
+		}
+		.cont{
+			background-image: url(image/bg4.png);
+			height:235px;
+		}
+	}
+	.music1{
+		width: 92%;
+		.head{
+			@include head("image/bg5.png");
+			padding-top: 20px;
+		}
+		.cont{
+			background-image: url(image/bg5_2.png);
+			height:265px;
+			color: #fff;
+			p{
+				
+				font-size: 30px;
+			}
+			span{
+				font-size: 14px;
+			}
+		}
+	}
+	.camera1{
+		width: 92%;
+		.head{
+			@include head("image/bg6.png");
+			padding-top: 20px;
+		}
+		.cont{
+			background-image: url(image/bg6-2.png);
+			height:500px;
+			color: #fff;
+			p{
+				
+				font-size: 30px;
+			}
+			span{
+				font-size: 14px;
+			}
+		}
+	}
+	.music2{
+		width: 92%;
+		.head{
+			@include head("image/bg7.png");
+			padding-top: 20px;
+		}
+	}
+}
