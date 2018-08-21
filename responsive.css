@@ -1,0 +1,49 @@
+@media screen and (max-width: 850px) {
+  .header .head_menu .logo {
+    float: left; }
+  .header .head_menu .menu {
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    width: 50%;
+    right: 0;
+    z-index: 2; }
+    .header .head_menu .menu1 li, .header .head_menu .menu2 li {
+      display: block; 
+      padding: 10px 35px;}
+  .header .head_menu .menu1 {
+    top: 45px; }
+  .header .head_menu .menu2 {
+    top: 216px; }
+  .header .head_menu #icon {
+    display: inline-block;
+    margin-top: 30px;
+    float: right;
+    margin-right: 50px;
+    font-size: 20px; }
+
+  .slider {
+    text-algin: center;
+    width: 300px;
+    margin: 0 auto; }
+    .slider .gallery ul li {
+      width: 65px;
+      height: 65px; } }
+@media screen and (max-width: 768px) {
+  .contents .photography .cont, .contents .status .cont, .contents .music1 .cont, .contents .camera2 .cont, .contents .camera3 .cont {
+    background-repeat: repeat;
+    height: auto;
+    padding-bottom: 25px; }
+
+  footer .bottom {
+    font-size: 10px; }
+    footer .bottom ul {
+      margin: 10px 0;
+      text-align: left; }
+      footer .bottom ul li {
+        padding: 0; } }
+@media screen and (max-width: 360px) {
+  #icon {
+    padding-right: 40px; } }
+
+/*# sourceMappingURL=responsive.css.map */

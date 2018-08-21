@@ -2,10 +2,72 @@
 *{
 	margin: 0;
 	padding:0;
-	font-family: Dosis;
+	
 }
+#active{
+	background-color: #f8a631;
+	border: 1px solid #f8a631;
+	a{
+		color: #fff;
+	}
+}
+h1,h2,h4{
+	font-weight: bold;
+	
+}
+	@mixin head($url){
+			height: 117px;
+			text-align: center;
+			color: #fff;
+			background-image: url($url);
+			
+	}
+	@mixin cont($url,$h,$paddingtop){
+		background-image: url($url);
+		background-repeat: no-repeat;
+		height: $h;
+		margin-bottom: 30px;
+		padding-top: $paddingtop;
+	}
+	@mixin time($s,$c,$w,$a){
+		font-size: $s;
+		color: $c;
+		width: $w;
+		text-align: $a;
+	}
+	@mixin title(){
+		text-align: center;
+		color: #333;
+		padding: 0 30px;
+	}
+	@mixin auther(){
+		font-size: 14px;
+		color: #666;
+		text-align: center;
+		padding-top:10px;
+	}
+	@mixin content(){
+		font-size: 16px;
+		color: #999;
+		padding-bottom: 30px;
+		padding-top: 10px;
+	}
+	@mixin social(){
+		font-size: 14px;
+		color: #333;
+		width: 100%;
+		text-align: center;
+	}
+	@mixin wave(){
+		margin: 34px auto;
+		display: block;
+	}
+	.table-striped > tbody > tr:nth-of-type(2n+1) {
+	    background-color: #eee;
+	}
 .header{
 	color:#fff;
+	font-family: Dosis;
 	.head_menu{
 		height:100px;
 		background-color:#232323;
@@ -13,6 +75,11 @@
 		
 		.logo{
 			text-align: center;
+			float: right;
+			width: 50%;
+		}
+		#icon{
+			display: none;
 		}
 		b{
 			font-size:60px;
@@ -21,6 +88,7 @@
 		ul{
 			list-style-type: none;
 			margin-top: 40px;
+			float: left;
 		}
 		li{
 			display: inline;
@@ -29,6 +97,7 @@
 		a{
 			color:#fff;
 			font-size: 16px;
+			font-weight: bold;
 		}
 		a:hover{
 			text-decoration: none;
@@ -67,54 +136,11 @@
 	}
 }
 
-.content{
+.contents{
 	width: 100%;
 	margin-top: 40px;
-	@mixin head($url){
-			height: 117px;
-			text-align: center;
-			color: #fff;
-			background-image: url($url);
-			
-	}
-	@mixin cont($url,$h){
-		background-image: url($url);
-		background-repeat: no-repeat;
-		height: $h;
-		margin-bottom: 30px;
-	}
-	@mixin time($s,$c,$w,$a){
-		font-size: $s;
-		color: $c;
-		width: $w;
-		text-align: $a;
-	}
-	@mixin title(){
-		font-size: 36px;
-		color: #333;
-	}
-	@mixin auther(){
-		font-size: 14px;
-		color: #666;
-		text-align: center;
-		padding-top:10px;
-	}
-	@mixin content(){
-		font-size: 16px;
-		color: #999;
-		padding-top: 15px;
-		padding-bottom: 30px;;
-	}
-	@mixin social(){
-		font-size: 14px;
-		color: #333;
-		width: 100%;
-		text-align: center;
-	}
-	@mixin wave(){
-		margin: 34px auto;
-		display: block;
-	}
+	font-family: "Raleway";
+
 	.time{
 		@include time(14px,#ff9933,100,center);
 	}
@@ -187,7 +213,18 @@
 			padding-top: 30px;
 		}
 		.cont{
-			@include cont("image/camerabg2.png",500px);
+			@include cont("image/camerabg2.png",500px,45px);
+		}
+	}
+	.video{
+		width: 92%;
+		.head{
+
+			@include head("image/bg.png");
+			padding-top: 30px;
+		}
+		.cont{
+			@include cont("image/camerabg2.png",500px,50px);
 		}
 	}
 	.photography{
@@ -196,15 +233,15 @@
 			@include head("image/bg2.png");
 		}
 		.cont{
-			height: 172px;
-			background-image: url(image/photobg.png);
+			@include cont("image/photobg.png",172px,45px);
+			
 			font-size: 30px;
-			font-weight: bold;
 			text-align: center;
-			margin-bottom: 30px;
 			a{
 				color:#333;
 				text-decoration: underline;
+				background-color: #f9fbd6;
+				white-space: pre-line;
 			}
 		}
 		
@@ -217,8 +254,7 @@
 			padding-top: 20px;
 		}
 		.cont{
-			background-image: url(image/musicbg.png);
-			height:157px;
+			@include cont("image/musicbg.png",157px,0);
 		}
 	}
 	.status{
@@ -228,8 +264,9 @@
 			padding-top: 20px;
 		}
 		.cont{
-			background-image: url(image/bg4.png);
-			height:235px;
+			@include cont("image/bg4.png",235px,25px);
+			padding-left: 30px;
+			padding-right: 30px;
 		}
 	}
 	.music1{
@@ -239,9 +276,10 @@
 			padding-top: 20px;
 		}
 		.cont{
-			background-image: url(image/bg5_2.png);
-			height:265px;
+			@include cont("image/bg5_2.png",265px,30px);
 			color: #fff;
+			padding-left: 50px;
+			padding-right: 50px;
 			p{
 				
 				font-size: 30px;
@@ -258,8 +296,7 @@
 			padding-top: 20px;
 		}
 		.cont{
-			background-image: url(image/bg6-2.png);
-			height:500px;
+			@include cont("image/bg6-2.png",500px,0);
 			color: #fff;
 			p{
 				
@@ -275,6 +312,455 @@
 		.head{
 			@include head("image/bg7.png");
 			padding-top: 20px;
+		}
+		.time{
+			font-weight: bold;
+			margin-top: 25px;
+		}
+	}
+	.camera2{
+		width: 92%;
+		.head{
+			@include head("image/bg8.png");
+			padding-top: 20px;
+		}
+		.cont{
+			@include cont("",290px,25px);
+			padding-left: 30px;
+			padding-right: 30px;
+			background-color: #f4f4f4;
+		}
+	}
+	.camera3{
+		width: 92%;
+		margin-bottom: 70px;
+		.head{
+			@include head("image/bg9.png");
+			padding-top: 20px;
+		}
+		.cont{
+			@include cont("image/bg92.png",365px,25px);
+			.content{
+				color: #333;
+				width: 100%;
+				.name{
+					padding-left: 35px;
+				}
+			}
+		}
+	}
+	.page{
+		width: 92%;
+		text-align: center;
+		margin-bottom: 100px;
+		ul{
+			list-style-type: none;
+			li{
+				display: inline;
+				padding: 14px 20px;
+				border: 1px solid #d3d3d3;
+				border-radius: 100%;
+			}
+
+		}
+
+	}
+	.slider{
+		span{
+			font-size: 16px;
+			font-weight: bold;
+			font-family: "Dosis";
+		}
+		hr{
+			border-top: 1px solid #f88d31;
+			width: 10%;
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+		.input{
+			height: 45px;
+			margin-top: 15px;
+			margin-bottom: 20px;
+			color: #fff;
+			input{
+				width: 80%;
+				float: left;
+				background-color: #52504e;
+				border: none;
+				height: 45px;
+				padding-left: 30px;
+			}
+			button{
+				width: 20%;
+				border: none;
+				float: left;
+				height: 45px;
+				background-color: #f8a631;
+			}
+		}
+		.list{
+			height: 432px;
+			width: 100%;
+			background-color: #f4f4f4;
+			border: 1px solid #ddd;
+			margin-top: 30px;
+			ul{
+				list-style-type: none;
+			}
+			.titles{
+				width: 100%;
+				text-align: center;
+				height: 40px;
+				background-color: #464442;
+				
+				li{
+					float: left;
+					font-size: 12px;
+					font-weight: bold;
+					width: 33.333333%;
+					padding:10px;
+					height: 100%;
+					
+				}
+				a{
+					color: #fff;
+				}
+			}
+			.titles li:hover{
+				background-color: #f4f4f4;
+				a{
+					color: #333;
+					text-decoration: none;
+				}
+			}
+		
+			#actives{
+				a{
+					color: #333;
+				}
+				
+				background-color: #f4f4f4;
+			}
+			.populor{
+				margin: 0 15px;
+			
+				li{
+					clear: both;
+					height: 95px;
+					padding: 10px 0;
+					width: 95%;
+					border-bottom: 1px solid #ededed;
+					.picture{
+						width: 30%;
+						float: left;
+					}
+					.slug{
+						width: 70%;
+						float: left;
+						span{
+							font-weight: bold;
+							font-size: 13px;
+						}
+						.star{
+							color: #f88d31;
+							li{
+								display: inline;
+								border-bottom: none;
+								i{
+									font-size: 9px;
+								}
+								.o{
+									color: #999;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.editor{
+			font-size: 12px;
+			margin-top: 40px;
+			margin-bottom: 30px;
+			.link{
+				width: 100%;
+				height: 335px;
+				i{
+					margin-top:85px;
+				}
+			}
+			.info{
+				width: 100%;
+				border: 1px solid #ddd;
+				height: 105px;
+				padding: 0 20px;
+				p{
+					color: #999;
+					
+				}
+				.easy{
+					float: left;
+					width: 35%;
+					font-weight: bold;
+					color: #999;
+					i{
+						margin-top:5px;
+						color: #2ecc71;
+					}
+				}
+				ul{
+					list-style-type: none;
+					float: left;
+					width: 60%;
+					text-align: right;
+					li{
+						display: inline;
+						i{
+							margin-top:5px;
+							color: #f8c231;
+						}
+						.o{
+							color: #cdcdcd;
+						}
+					}
+				}
+			}
+		}
+		.adv{
+			margin-bottom: 30px;
+			.square{
+				width: 100%;
+				height:263px;
+				background-color: #f4f4f4;
+				position: relative;
+			}
+			.one,.two,.three,.foure{
+				width: 105px;
+				height: 105px;
+				background-color: #fff;
+				position: absolute;
+				border: 1px solid #ddd;
+				text-align: center;
+				p{
+					font-size: 11px;
+					color: #666;
+					margin-top: 40px;
+				}
+			}
+			.one{
+				top:15px;
+				left:15px;
+			}
+			.two{
+				top:15px;
+				right: 15px;
+			}
+			.three{
+				bottom:15px;
+				left:15px;
+			}
+			.foure{
+				bottom:15px;
+				right: 15px;
+			}
+		}
+		.responsive{
+			margin-bottom: 30px;
+			.video{
+				background-color: #585858;
+				width: 100%;
+				height: 175px;
+			}
+		}
+		.gallery{
+		
+				
+				ul{
+					width: 100%;
+					height: 165px;
+					list-style-type: none;
+					li{
+						display: inline-block;
+						background-color: #585858;
+						width: 60px;
+						height: 60px;
+					}
+				}
+			
+		}
+		.links{
+			    margin-bottom: 30px;
+			ul{
+				list-style-position: inside;
+				color: #ff9933;
+				li{
+					a{
+						color: #333;
+						font-size: 12px;
+						font-weight: bold;
+					}
+				}
+
+			}
+			
+				
+		}
+	}
+}
+footer{
+	font-family: "Raleway";
+
+	.info{
+		width: 100%;
+		background-color: #333333;
+		color: #fff;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		.col-md-3{
+			margin-bottom: 50px;
+		}
+		h4{
+			font-family: "Dosis";
+		}
+		hr{
+			border-top: 1px solid #f88d31;
+			width: 10%;
+			margin-bottom: 30px;
+		}
+		ul{
+			list-style-type: none;
+		}
+		.recipes{
+			
+			li{
+				clear: both;
+				height: 95px;
+				padding: 10px 0;
+				width: 95%;
+				border-bottom: 1px solid #5a5a5a;
+				.picture{
+					width: 30%;
+					float: left;
+				}
+				.slug{
+					width: 70%;
+					float: left;
+					span{
+						font-weight: bold;
+						font-size: 13px;
+					}
+					.star{
+						color: #f88d31;
+						li{
+							display: inline;
+							border-bottom: none;
+							i{
+								font-size: 9px;
+							}
+							.o{
+								color: #999;
+							}
+						}
+					}
+				}
+			}
+			
+		}
+		.categoty, .blog{
+
+			ul {
+				width: 95%;
+				li{
+					padding:10px 0;
+					border-bottom: 1px solid #5a5a5a;
+					font-weight: bold;
+					font-size: 13px;
+					a{
+						color: #fff;
+					}
+				}
+			}
+		}
+		.blog{
+			ul{
+				li{
+					ul{
+						margin-top: 10px;
+						li{
+							display: inline;
+							border-bottom: none;
+							font-size: 10px;
+						}
+					}
+				}
+			}
+		}
+		.about{
+			margin-bottom: 35px;
+			hr{
+				margin-bottom: 40px;
+			}
+			span{
+				font-weight: bold;
+			}
+		}
+		.subscribe{
+			.input{
+				height: 45px;
+				margin-top: 15px;
+				margin-bottom: 20px;
+				input{
+					width: 80%;
+					float: left;
+					background-color: #52504e;
+					border: none;
+					height: 45px;
+					padding-left: 30px;
+				}
+				button{
+					width: 20%;
+					border: none;
+					float: left;
+					height: 45px;
+					background-color: #f8a631;
+				}
+			}
+			ul{
+				li{
+					display: inline;
+					a{
+						color: #fff;
+						font-size: 16px;
+						padding-right: 15px;
+					}
+				}
+			}
+		}
+	}
+		height: 8px;
+	.line{
+		width: 100%;
+		background-image: url(image/line.png);
+	}
+	.bottom{
+		background-color: #232323;
+		padding:35px 0;
+		font-size: 11px;
+		font-family: "Raleway";
+		span{
+			color: #fff;	
+		}
+		ul{
+			list-style-type: none;
+			color: #fff;
+			text-align: right;
+			li{
+				display: inline;
+				padding:0 10px;
+				a{
+					color: #fff;
+				}
+			}
 		}
 	}
 }

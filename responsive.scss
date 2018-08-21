@@ -1,0 +1,78 @@
+@media screen and (max-width:850px) {
+	.header{
+		.head_menu{
+			.logo{
+				float: left;
+			}
+			.menu{
+				display: none;
+				position: fixed;
+				z-index: 2;
+				background: rgba(0, 0, 0, 0.6);
+				right: 0;
+				width: 50%;
+				li{
+					display: block;
+					padding: 10px 35px;
+				}
+			}
+			.memu1{
+				top:45px;
+			}
+			.menu2{
+				top:216px;
+			}
+			#icon{
+				display: inline-block;
+				margin-top: 30px;
+				float: right;
+				margin-right: 50px;
+				font-size: 20px;
+							}
+		}
+	}
+	.slider{
+		text-algin:center;
+		width: 300px;
+		margin: 0 auto;
+		.gallery{
+			ul{
+				li{
+					width: 65px;
+					height: 65px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 768px){
+	.contents{
+		.photography,.status,.music1, .camera2, .camera3{
+			.cont{
+				
+				background-repeat: repeat;
+				height: auto;
+				padding-bottom: 25px;
+			}
+			
+		}
+	
+	footer{
+		.bottom{
+			font-size: 10px;
+			ul{
+				margin: 10px 0;
+				text-align: left;
+				li{
+					padding:0;
+				}
+			}
+		}
+	}
+
+} 
+@media screen and (max-width: 360px){
+	#icon{
+		padding-right: 40px;
+	}
+}
