@@ -21,8 +21,8 @@
     position: fixed;
     z-index: 2;
     background: rgba(0, 0, 0, 0.6);
-    right: 0;
-    width: 50%; }
+    right: 10px;
+    left: 10px; }
     .header .head_menu .menu li {
       display: block;
       padding: 10px 35px; }
@@ -70,6 +70,14 @@
     width: 15%; }
     .contents .comment .no1 .reply a {
       font-size: 9px !important; }
+  .contents .here form .input {
+    width: 100%; }
+  .contents .here form .bottom {
+    heigh: 85px; }
+    .contents .here form .bottom button {
+      float: left;
+      clear: both;
+      margin-top: 15px; }
 
   footer .bottom {
     font-size: 10px; }
@@ -78,7 +86,13 @@
       text-align: left; }
       footer .bottom ul li {
         padding: 0; } }
+@media screen and (max-width: 680px) {
+  .here .bottom button {
+    margin-top: 15px !important; } }
 @media screen and (max-width: 480px) {
+  .writer p {
+    margin: 0 15px !important; }
+
   .related .current_post .post img {
     width: 23%; }
 
@@ -87,10 +101,7 @@
     .comment .no1 {
       margin: 20px 0; }
       .comment .no1 .img {
-        width: 100%; }
-
-  .here .bottom button {
-    margin-top: 15px !important; } }
+        width: 100%; } }
 @media screen and (max-width: 360px) {
   #icon {
     padding-right: 40px; }
@@ -106,7 +117,8 @@
     font-size: 13px !important; }
 
   .here {
-    width: 100%; }
+    width: 100%;
+    padding-bottom: 40px !important; }
     .here form {
       padding-left: 10px !important; }
       .here form .input span, .here form .input label {

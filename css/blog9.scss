@@ -141,9 +141,14 @@
 		textarea{
 			border: none;
 			width: 93%;
+			padding: 10px;
 		}
 		.bottom{
 			margin: 25px 0;
+			height: 25px;
+			.check{
+				float: left;
+			}
 			button{
 				float: right;
 				margin-right: 50px;

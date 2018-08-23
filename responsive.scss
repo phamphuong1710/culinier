@@ -48,8 +48,8 @@
 				position: fixed;
 				z-index: 2;
 				background: rgba(0, 0, 0, 0.6);
-				right: 0;
-				width: 50%;
+				right: 10px;
+				left:10px;
 				li{
 					display: block;
 					padding: 10px 35px;
@@ -131,6 +131,21 @@
 				}
 			}
 		}
+		.here{
+			form{
+				.input{
+					width: 100%;
+				}
+				.bottom{
+					heigh:85px;
+					button{
+						float: left;
+						clear: both;
+						margin-top: 15px;
+					}
+				}
+			}
+		}
 	}
 	footer{
 		.bottom{
@@ -145,7 +160,21 @@
 		}
 	}
 } 
+@media screen and (max-width: 680px){
+	.here{
+		.bottom{
+				button{
+					margin-top: 15px!important;
+				}
+			}
+	}
+}
 @media screen and (max-width: 480px){
+	.writer{
+		p{
+			margin: 0 15px!important;
+		}
+	}
 	.related {
 		.current_post{
 			.post{
@@ -163,13 +192,7 @@
 			}
 		}
 	}
-	.here{
-		.bottom{
-				button{
-					margin-top: 15px!important;
-				}
-			}
-	}
+	
 }
 @media screen and (max-width: 360px){
 	#icon{
@@ -201,6 +224,7 @@
 	}
 	.here{
 		width: 100%;
+		padding-bottom: 40px!important;
 		form{
 			padding-left: 10px!important;
 			.input{

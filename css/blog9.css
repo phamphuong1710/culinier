@@ -107,9 +107,13 @@
       padding: 15px 0; }
     .here form textarea {
       border: none;
-      width: 93%; }
+      width: 93%;
+      padding: 10px; }
     .here form .bottom {
-      margin: 25px 0; }
+      margin: 25px 0;
+      height: 25px; }
+      .here form .bottom .check {
+        float: left; }
       .here form .bottom button {
         float: right;
         margin-right: 50px;
