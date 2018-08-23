@@ -34,7 +34,7 @@
     display: inline-block;
     margin-top: 30px;
     float: right;
-    margin-right: 50px;
+    margin-right: 30px;
     font-size: 20px; }
 
   .slider {
@@ -100,16 +100,26 @@
     width: 100%; }
     .comment .no1 {
       margin: 20px 0; }
-      .comment .no1 .img {
-        width: 100%; } }
+      .comment .no1 .avar {
+        margin-top: 15px !important; }
+        .comment .no1 .avar .img {
+          width: 100%;
+          left: 0 !important; }
+      .comment .no1 .cmt {
+        padding-left: 10px !important; } }
 @media screen and (max-width: 360px) {
   #icon {
     padding-right: 40px; }
 
-  .camera .comment .no1 {
+  .comment .no1 {
     height: 245px; }
-    .camera .comment .no1 .avar {
-      margin-top: 20px; }
+    .comment .no1 .avar {
+      margin-top: 20px;
+      width: 20%; }
+    .comment .no1 .cmt .user {
+      width: 80% !important; }
+    .comment .no1 .cmt .reply {
+      width: 20%; }
 
   .related .current_post .post .text span, .related .current_post .post .text p {
     font-size: 10px !important; }
