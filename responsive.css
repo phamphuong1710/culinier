@@ -1,16 +1,31 @@
+@media screen and (min-width: 1024px) {
+  .list .populor .picture img {
+    width: 100%; }
+  .list .populor .slug {
+    padding: 0 5px; } }
+@media screen and (max-width: 1024px) {
+  .contents .slider .input input {
+    font-size: 12px; }
+  .contents .slider .adv .one, .contents .slider .adv .two, .contents .slider .adv .three, .contents .slider .adv .foure {
+    width: 90px;
+    height: 96px; }
+  .contents .slider .adv .one, .contents .slider .adv .two {
+    top: 25px; }
+  .contents .slider .adv .three, .contents .slider .adv .foure {
+    bottom: 25px; } }
 @media screen and (max-width: 850px) {
   .header .head_menu .logo {
     float: left; }
   .header .head_menu .menu {
     display: none;
     position: fixed;
+    z-index: 2;
     background: rgba(0, 0, 0, 0.6);
-    width: 50%;
     right: 0;
-    z-index: 2; }
-    .header .head_menu .menu1 li, .header .head_menu .menu2 li {
-      display: block; 
-      padding: 10px 35px;}
+    width: 50%; }
+    .header .head_menu .menu li {
+      display: block;
+      padding: 10px 35px; }
   .header .head_menu .menu1 {
     top: 45px; }
   .header .head_menu .menu2 {
@@ -34,6 +49,27 @@
     background-repeat: repeat;
     height: auto;
     padding-bottom: 25px; }
+  .contents .comment .no1 .avar {
+    width: 18%;
+    margin-top: 5px; }
+    .contents .comment .no1 .avar .img {
+      left: 30%; }
+    .contents .comment .no1 .avar .stt {
+      display: none; }
+  .contents .comment .no1 .cmt {
+    width: 82%; }
+    .contents .comment .no1 .cmt .user {
+      width: 85%; }
+      .contents .comment .no1 .cmt .user .name {
+        width: 45%; }
+      .contents .comment .no1 .cmt .user .date {
+        width: 55%;
+        font-size: 10px !important; }
+  .contents .comment .no1 .reply {
+    padding-right: 3px;
+    width: 15%; }
+    .contents .comment .no1 .reply a {
+      font-size: 9px !important; }
 
   footer .bottom {
     font-size: 10px; }
@@ -42,8 +78,40 @@
       text-align: left; }
       footer .bottom ul li {
         padding: 0; } }
+@media screen and (max-width: 480px) {
+  .related .current_post .post img {
+    width: 23%; }
+
+  .comment {
+    width: 100%; }
+    .comment .no1 {
+      margin: 20px 0; }
+      .comment .no1 .img {
+        width: 100%; }
+
+  .here .bottom button {
+    margin-top: 15px !important; } }
 @media screen and (max-width: 360px) {
   #icon {
-    padding-right: 40px; } }
+    padding-right: 40px; }
+
+  .camera .comment .no1 {
+    height: 245px; }
+    .camera .comment .no1 .avar {
+      margin-top: 20px; }
+
+  .related .current_post .post .text span, .related .current_post .post .text p {
+    font-size: 10px !important; }
+  .related .current_post .post .text h5 {
+    font-size: 13px !important; }
+
+  .here {
+    width: 100%; }
+    .here form {
+      padding-left: 10px !important; }
+      .here form .input span, .here form .input label {
+        font-size: 12px; }
+      .here form .bottom button {
+        margin-top: 15px !important; } }
 
 /*# sourceMappingURL=responsive.css.map */

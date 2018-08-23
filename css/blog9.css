@@ -1,0 +1,123 @@
+.related {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px; }
+  .related .current_post .post {
+    height: 132px; }
+    .related .current_post .post img {
+      float: left;
+      margin: 20px; }
+    .related .current_post .post .text {
+      margin: 15px 0; }
+      .related .current_post .post .text span {
+        color: #ff9933;
+        font-size: 11px; }
+      .related .current_post .post .text h5 {
+        font-size: 16px;
+        font-weight: bold; }
+      .related .current_post .post .text p {
+        font-size: 12px;
+        color: #666666; }
+
+.comment {
+  width: 92%;
+  margin-top: 50px;
+  margin-bottom: 30px; }
+  .comment h4 {
+    text-align: center;
+    margin-bottom: 35px; }
+  .comment .no1 {
+    height: 175px;
+    padding: 10px 0;
+    margin: 15px 0; }
+    .comment .no1 .avar {
+      position: relative;
+      float: left;
+      height: 100%;
+      width: 18%; }
+      .comment .no1 .avar .stt {
+        position: absolute;
+        left: 10px;
+        top: 10px; }
+      .comment .no1 .avar .img {
+        position: absolute;
+        left: 35%; }
+    .comment .no1 .cmt {
+      float: left;
+      width: 82%;
+      padding-left: 30px; }
+      .comment .no1 .cmt .user {
+        float: left;
+        padding: 10px 10px; }
+        .comment .no1 .cmt .user .name {
+          float: left; }
+          .comment .no1 .cmt .user .name h5 {
+            font-weight: bold; }
+        .comment .no1 .cmt .user .date {
+          float: left;
+          font-size: 11px;
+          color: #999999;
+          margin-top: 10px;
+          padding: 0 10px; }
+      .comment .no1 .cmt .reply {
+        float: right;
+        margin-top: 20px;
+        padding-right: 10px; }
+        .comment .no1 .cmt .reply a {
+          font-size: 11px; }
+      .comment .no1 .cmt hr {
+        clear: both; }
+      .comment .no1 .cmt .text {
+        font-size: 13px;
+        color: #333;
+        padding-bottom: 20px; }
+  .comment .rep {
+    margin-left: 5%; }
+    .comment .rep .cmt {
+      background-color: #f4f4f4; }
+
+.here {
+  clear: both;
+  width: 92%;
+  background-color: #f4f4f4;
+  padding-top: 40px;
+  margin-bottom: 70px;
+  padding-bottom: 20px; }
+  .here h4, .here h5 {
+    text-align: center; }
+  .here h5 {
+    color: #999999; }
+  .here form {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    padding-left: 40px; }
+    .here form .input {
+      width: 32%;
+      float: left; }
+      .here form .input label {
+        margin-bottom: 15px;
+        margin-top: 20px; }
+      .here form .input input {
+        border: none;
+        background-color: #fff;
+        height: 45px;
+        padding: 0 20px;
+        width: 90%; }
+    .here form #comment {
+      width: 100%;
+      padding: 15px 0; }
+    .here form textarea {
+      border: none;
+      width: 93%; }
+    .here form .bottom {
+      margin: 25px 0; }
+      .here form .bottom button {
+        float: right;
+        margin-right: 50px;
+        width: 170px;
+        padding: 10px;
+        border-radius: 50px;
+        border: none;
+        background-color: #f8a631;
+        color: #fff; }
+
+/*# sourceMappingURL=blog9.css.map */

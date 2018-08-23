@@ -1,0 +1,159 @@
+.related{
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 30px;
+	.current_post{
+		.post{
+			height: 132px;
+			img{
+				float: left;
+				margin:20px;
+			}
+			.text{
+				margin: 15px 0;
+				span{
+					color: #ff9933;
+					font-size: 11px;
+				}
+				h5{
+					font-size: 16px;
+					font-weight: bold;
+				}
+				p{
+					font-size: 12px;
+					color: #666666;
+				}
+			}
+		}
+	}
+}
+.comment{
+	width: 92%;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	h4{
+		text-align: center;
+		margin-bottom: 35px;
+	}
+	.no1{
+		height: 175px;
+		padding:10px 0;
+		margin: 15px 0;
+		.avar{
+			position: relative;
+			float: left;
+			height: 100%;
+			width: 18%;
+			.stt{
+				position: absolute;
+				left:10px;
+				top: 10px;
+			}
+			.img{
+				position: absolute;
+				left:35%;
+			}
+		}
+		.cmt{
+			float: left;
+			width: 82%;
+			padding-left: 30px;
+			.user{
+				float: left;
+				padding: 10px 10px;
+				.name{
+					float: left;
+					
+					h5{
+						font-weight: bold;
+					}
+				}
+				.date{
+					float: left;
+					font-size: 11px;
+					color: #999999;
+					margin-top: 10px;
+					padding: 0 10px;
+				}
+
+			}
+			.reply{
+					float: right;
+					margin-top: 20px;
+					padding-right: 10px;
+					a{
+						font-size: 11px;
+					}
+					
+				}
+			hr{
+				clear: both;
+			}
+			.text{
+				font-size: 13px;
+				color: #333;
+				padding-bottom:20px;
+			}
+		}
+	}
+	.rep{
+		margin-left: 5%;
+		.cmt{
+			background-color: #f4f4f4;
+		}
+	}
+}
+.here{
+	clear: both;
+	width: 92%;
+	background-color: #f4f4f4;
+	padding-top: 40px;
+	margin-bottom: 70px;
+	padding-bottom: 20px;
+	h4,h5{
+		text-align: center;
+	}
+	h5{
+		color: #999999;
+	}
+	form{
+		padding-top: 40px;
+		padding-bottom: 30px;
+		padding-left: 40px;
+		.input{
+			width: 32%;
+			float: left;
+			label{
+				margin-bottom: 15px;
+				margin-top: 20px;
+			}
+			input{
+				border: none ;
+				background-color: #fff;
+				height: 45px;
+				padding: 0 20px;
+				width: 90%;
+			}
+		}
+		#comment{
+			width: 100%;
+			padding:15px 0;
+		}
+		textarea{
+			border: none;
+			width: 93%;
+		}
+		.bottom{
+			margin: 25px 0;
+			button{
+				float: right;
+				margin-right: 50px;
+				width: 170px;
+				padding: 10px;
+				border-radius: 50px;
+				border: none;
+				background-color: #f8a631;
+				color: #fff;
+			}
+		}
+	}
+}
