@@ -4,6 +4,71 @@
 	padding:0;
 	
 }
+$font-title:"Dosis";
+$font-head:"Raleway";
+$color-head:#333333;
+$color-content:#999999;
+$color-note:#666;
+h1,h2,h4{
+	font-weight: bold;
+	
+}
+@mixin head($url){
+		height: 117px;
+		text-align: center;
+		color: #fff;
+		background-image: url($url);
+		font-weight: bold;
+}
+@mixin cont($bgcolor,$h,$paddingtop){
+	background-color:$bgcolor;
+	background-repeat: no-repeat;
+	height: $h;
+	margin-bottom: 30px;
+	padding-top: $paddingtop;
+	padding-bottom: $paddingtop;
+}
+@mixin time($s,$c,$w,$a){
+	font-size: $s;
+	color: $c;
+	width: $w;
+	text-align: $a;
+}
+@mixin title(){
+	text-align: center;
+	color: $color-head;
+	padding: 0 30px;
+}
+@mixin auther(){
+	font-size: 14px;
+	color: $color-note;
+	text-align: center;
+	padding-top:10px;
+}
+@mixin content(){
+	font-size: 16px;
+	color:$color-content;
+	padding-top: 10px;
+}
+@mixin social(){
+	font-size: 14px;
+	color: $color-head;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;
+}
+@mixin wave(){
+	margin: 34px auto;
+	display: block;
+}
+@mixin hr(){
+	display: inline-block;
+	height: 2px;
+	content:" ";
+	background-color: #f88d31;
+	clear: both;
+	width: 10%;
+}
 #active{
 	background-color: #f8a631;
 	border: 1px solid #f8a631;
@@ -11,63 +76,15 @@
 		color: #fff;
 	}
 }
-h1,h2,h4{
-	font-weight: bold;
-	
+.table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color: #eee;
 }
-	@mixin head($url){
-			height: 117px;
-			text-align: center;
-			color: #fff;
-			background-image: url($url);
-			
-	}
-	@mixin cont($url,$h,$paddingtop){
-		background-image: url($url);
-		background-repeat: no-repeat;
-		height: $h;
-		margin-bottom: 30px;
-		padding-top: $paddingtop;
-	}
-	@mixin time($s,$c,$w,$a){
-		font-size: $s;
-		color: $c;
-		width: $w;
-		text-align: $a;
-	}
-	@mixin title(){
-		text-align: center;
-		color: #333;
-		padding: 0 30px;
-	}
-	@mixin auther(){
-		font-size: 14px;
-		color: #666;
-		text-align: center;
-		padding-top:10px;
-	}
-	@mixin content(){
-		font-size: 16px;
-		color: #999;
-		padding-bottom: 30px;
-		padding-top: 10px;
-	}
-	@mixin social(){
-		font-size: 14px;
-		color: #333;
-		width: 100%;
-		text-align: center;
-	}
-	@mixin wave(){
-		margin: 34px auto;
-		display: block;
-	}
-	.table-striped > tbody > tr:nth-of-type(2n+1) {
-	    background-color: #eee;
-	}
+.auther img{
+	margin-right: 10px;
+}
 .header{
 	color:#fff;
-	font-family: Dosis;
+	font-family:$font-title;
 	.head_menu{
 		height:100px;
 		background-color:#232323;
@@ -77,13 +94,10 @@ h1,h2,h4{
 			text-align: center;
 			float: right;
 			width: 50%;
+			margin-top: 20px;
 		}
 		#icon{
 			display: none;
-		}
-		b{
-			font-size:60px;
-			font-family: "Yellowtail";
 		}
 		ul{
 			list-style-type: none;
@@ -122,7 +136,7 @@ h1,h2,h4{
 		width: 100%;
 		height: 230px;
 		text-align: center;
-		padding-top: 80px;
+		padding-top: 60px;
 		background-image: url(image/titlebg.png);
 		b{
 			font-size: 30px;
@@ -139,8 +153,10 @@ h1,h2,h4{
 .contents{
 	width: 100%;
 	margin-top: 40px;
-	font-family: "Raleway";
-
+	font-family:$font-head;
+	.main{
+		width: 92%;
+	}
 	.time{
 		@include time(14px,#ff9933,100,center);
 	}
@@ -156,7 +172,7 @@ h1,h2,h4{
 	.social{
 		@include social();
 		a{
-			color: #666;
+			color: $color-note;
 			padding-right: 20px;
 		}
 		ul{
@@ -165,19 +181,23 @@ h1,h2,h4{
 		}
 		li{
 			display: inline;
+			font-size: 16px;
+			i{
+				padding-right: 10px;
+			}
 		}
 		.share{
 			position: relative;
 		    display: inline-block;
 		    .tooltiptext {
 				visibility: hidden;
-				width: 220px;
+				width: 300px;
 				background-color: #fff;
-				color: #333333;
+				color: $color-head;
 				text-align: center;
 				border-radius: 50px;
 				padding: 5px 0;
-				border:1px solid #999999;
+				border:1px solid #ddd;
 				position: absolute;
 				z-index: 1;
 				bottom: 100%;
@@ -194,7 +214,7 @@ h1,h2,h4{
 			    margin-left: -5px;
 			    border-width: 5px;
 			    border-style: solid;
-			    border-color: #999 transparent transparent transparent;
+			    border-color:$color-content transparent transparent transparent;
 			}
 		}
 		.share:hover .tooltiptext {
@@ -206,39 +226,36 @@ h1,h2,h4{
 	}
 	
 	.camera{
-		width: 92%;
 		.head{
 
 			@include head("image/bg1.png");
-			padding-top: 30px;
+			padding-top: 28px;
 		}
 		.cont{
-			@include cont("image/camerabg2.png",500px,45px);
+			@include cont(#585858,500px,45px);
 		}
 	}
 	.video{
-		width: 92%;
 		.head{
 
 			@include head("image/bg.png");
 			padding-top: 30px;
 		}
 		.cont{
-			@include cont("image/camerabg2.png",500px,50px);
+			@include cont(#585858,500px,50px);
 		}
 	}
 	.photography{
-		width: 92%;
 		.head{
 			@include head("image/bg2.png");
 		}
 		.cont{
-			@include cont("image/photobg.png",172px,45px);
+			@include cont(#f4f4f4,auto,45px);
 			
 			font-size: 30px;
 			text-align: center;
 			a{
-				color:#333;
+				color:$color-head;
 				text-decoration: underline;
 				background-color: #f9fbd6;
 				white-space: pre-line;
@@ -248,35 +265,33 @@ h1,h2,h4{
 
 	}
 	.music{
-		width: 92%;
 		.head{
 			@include head("image/bg3.png");
 			padding-top: 20px;
 		}
 		.cont{
-			@include cont("image/musicbg.png",157px,0);
+			@include cont(#fff,157px,0);
+			background-image: url(image/musicbg.png);
 		}
 	}
 	.status{
-		width: 92%;
 		.head{
 			@include head("image/status.png");
 			padding-top: 20px;
 		}
 		.cont{
-			@include cont("image/bg4.png",235px,25px);
+			@include cont(#f4f4f4,auto,25px);
 			padding-left: 30px;
 			padding-right: 30px;
 		}
 	}
 	.music1{
-		width: 92%;
 		.head{
 			@include head("image/bg5.png");
 			padding-top: 20px;
 		}
 		.cont{
-			@include cont("image/bg5_2.png",265px,30px);
+			@include cont(#232323,auto,30px);
 			color: #fff;
 			padding-left: 50px;
 			padding-right: 50px;
@@ -290,13 +305,12 @@ h1,h2,h4{
 		}
 	}
 	.camera1{
-		width: 92%;
 		.head{
 			@include head("image/bg6.png");
 			padding-top: 20px;
 		}
 		.cont{
-			@include cont("image/bg6-2.png",500px,0);
+			@include cont(#585858,500px,0);
 			color: #fff;
 			p{
 				
@@ -308,7 +322,6 @@ h1,h2,h4{
 		}
 	}
 	.music2{
-		width: 92%;
 		.head{
 			@include head("image/bg7.png");
 			padding-top: 20px;
@@ -319,29 +332,27 @@ h1,h2,h4{
 		}
 	}
 	.camera2{
-		width: 92%;
 		.head{
 			@include head("image/bg8.png");
-			padding-top: 20px;
+			padding-top: 28px;
 		}
 		.cont{
-			@include cont("",290px,25px);
+			@include cont(#f4f4f4,auto,25px);
 			padding-left: 30px;
 			padding-right: 30px;
 			background-color: #f4f4f4;
 		}
 	}
 	.camera3{
-		width: 92%;
 		margin-bottom: 70px;
 		.head{
 			@include head("image/bg9.png");
-			padding-top: 20px;
+			padding-top: 15px;
 		}
 		.cont{
-			@include cont("image/bg92.png",365px,25px);
+			@include cont(#f4f4f4,auto,25px);
 			.content{
-				color: #333;
+				color: $color-head;
 				width: 100%;
 				.name{
 					padding-left: 35px;
@@ -350,32 +361,32 @@ h1,h2,h4{
 		}
 	}
 	.page{
-		width: 92%;
 		text-align: center;
 		margin-bottom: 100px;
 		ul{
 			list-style-type: none;
 			li{
 				display: inline;
-				padding: 14px 20px;
+				padding: 15px 20px;
 				border: 1px solid #d3d3d3;
-				border-radius: 100%;
+				border-radius: 50%;
 			}
 
 		}
 
 	}
 	.slider{
-		span{
-			font-size: 16px;
-			font-weight: bold;
-			font-family: "Dosis";
+		.titles{
+			margin-bottom: 30px;
+			h5{
+				font-size: 16px;
+				font-weight: bold;
+				font-family: $font-title;
+			}
 		}
-		hr{
-			border-top: 1px solid #f88d31;
-			width: 10%;
-			margin-top: 15px;
-			margin-bottom: 15px;
+		
+		.titles:after{
+			@include hr();
 		}
 		.input{
 			height: 45px;
@@ -385,14 +396,17 @@ h1,h2,h4{
 			input{
 				width: 80%;
 				float: left;
-				background-color: #52504e;
-				border: none;
+				border: 1px solid #ddd;
+				font-size: 12px;
 				height: 45px;
 				padding-left: 30px;
+				color: $color-note;
 			}
 			button{
 				width: 20%;
 				border: none;
+				font-size: 12px;
+				font-weight: bold;
 				float: left;
 				height: 45px;
 				background-color: #f8a631;
@@ -403,11 +417,11 @@ h1,h2,h4{
 			width: 100%;
 			background-color: #f4f4f4;
 			border: 1px solid #ddd;
-			margin-top: 30px;
+			margin-top: 50px;
 			ul{
 				list-style-type: none;
 			}
-			.titles{
+			.titled{
 				width: 100%;
 				text-align: center;
 				height: 40px;
@@ -426,17 +440,17 @@ h1,h2,h4{
 					color: #fff;
 				}
 			}
-			.titles li:hover{
+			.titled li:hover{
 				background-color: #f4f4f4;
 				a{
-					color: #333;
+					color: $color-head;
 					text-decoration: none;
 				}
 			}
 		
 			#actives{
 				a{
-					color: #333;
+					color: $color-head;
 				}
 				
 				background-color: #f4f4f4;
@@ -470,7 +484,7 @@ h1,h2,h4{
 									font-size: 9px;
 								}
 								.o{
-									color: #999;
+									color:$color-content;
 								}
 							}
 						}
@@ -480,11 +494,10 @@ h1,h2,h4{
 		}
 		.editor{
 			font-size: 12px;
-			margin-top: 40px;
-			margin-bottom: 30px;
+			margin-top: 50px;
+			margin-bottom: 50px;
 			.link{
 				width: 100%;
-				height: 335px;
 				i{
 					margin-top:85px;
 				}
@@ -495,14 +508,14 @@ h1,h2,h4{
 				height: 105px;
 				padding: 0 20px;
 				p{
-					color: #999;
+					color:$color-content;
 					
 				}
 				.easy{
 					float: left;
 					width: 35%;
 					font-weight: bold;
-					color: #999;
+					color:$color-content;
 					i{
 						margin-top:5px;
 						color: #2ecc71;
@@ -527,7 +540,7 @@ h1,h2,h4{
 			}
 		}
 		.adv{
-			margin-bottom: 30px;
+			margin-bottom: 50px;
 			.square{
 				width: 100%;
 				height:263px;
@@ -543,7 +556,7 @@ h1,h2,h4{
 				text-align: center;
 				p{
 					font-size: 11px;
-					color: #666;
+					color: $color-note;
 					margin-top: 40px;
 				}
 			}
@@ -565,7 +578,7 @@ h1,h2,h4{
 			}
 		}
 		.responsive{
-			margin-bottom: 30px;
+			margin-bottom: 50px;
 			.video{
 				background-color: #585858;
 				width: 100%;
@@ -575,7 +588,7 @@ h1,h2,h4{
 		.gallery{		
 			ul{
 				width: 100%;
-				margin-bottom: 35px;
+				margin-bottom: 50px;
 				list-style-type: none;
 				li{
 					display: inline-block;
@@ -586,13 +599,13 @@ h1,h2,h4{
 			}
 		}
 		.links{
-			    margin-bottom: 30px;
+			    margin-bottom: 50px;
 			ul{
 				list-style-position: inside;
 				color: #ff9933;
 				li{
 					a{
-						color: #333;
+						color: $color-head;
 						font-size: 12px;
 						font-weight: bold;
 					}
@@ -605,19 +618,23 @@ h1,h2,h4{
 	}
 }
 footer{
-	font-family: "Raleway";
-
+	font-family: $font-head;
+	.title{
+		margin-bottom: 30px;
+	}
+	.title:after{
+		@include hr();
+	}
 	.info{
 		width: 100%;
-		background-color: #333333;
+		background-color: $color-head;
 		color: #fff;
 		padding-top: 50px;
-		padding-bottom: 20px;
 		.col-md-3{
 			margin-bottom: 50px;
 		}
 		h4{
-			font-family: "Dosis";
+			font-family: $font-title;
 		}
 		hr{
 			border-top: 1px solid #f88d31;
@@ -655,7 +672,7 @@ footer{
 								font-size: 9px;
 							}
 							.o{
-								color: #999;
+								color: $color-content;
 							}
 						}
 					}
@@ -721,6 +738,8 @@ footer{
 					float: left;
 					height: 45px;
 					background-color: #f8a631;
+					font-size: 12px;
+					font-weight: bold;
 				}
 			}
 			ul{
@@ -735,16 +754,17 @@ footer{
 			}
 		}
 	}
-		height: 8px;
 	.line{
 		width: 100%;
 		background-image: url(image/line.png);
+		height: 8px;
 	}
 	.bottom{
 		background-color: #232323;
-		padding:35px 0;
+		padding:35px 0 30px 0;
 		font-size: 11px;
-		font-family: "Raleway";
+		font-family: $font-head;
+		font-weight: bold;
 		span{
 			color: #fff;	
 		}

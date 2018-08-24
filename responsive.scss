@@ -1,3 +1,11 @@
+@media screen and (max-width:1200px) {
+	
+	#avarta:after,#avarta:before{
+		display: none!important;
+    
+	}
+
+}
 @media screen and (min-width:1024px) {
 	.list{
 				.populor{
@@ -37,7 +45,7 @@
 	}
 
 }
-@media screen and (max-width:850px) {
+@media screen and (max-width:1000px) {
 	.header{
 		.head_menu{
 			.logo{
@@ -67,8 +75,14 @@
 				float: right;
 				margin-right: 30px;
 				font-size: 20px;
-							}
+			}
 		}
+	}	
+}
+@media screen and (max-width:850px) {
+
+	.main{
+		width: 100%!important;
 	}
 	.slider{
 		text-algin:center;
@@ -86,14 +100,6 @@
 }
 @media screen and (max-width: 768px){
 	.contents{
-		.photography,.status,.music1, .camera2, .camera3{
-			.cont{
-				
-				background-repeat: repeat;
-				height: auto;
-				padding-bottom: 25px;
-			}	
-		}
 		.comment{
 			.no1{
 				.avar{
@@ -135,6 +141,12 @@
 			form{
 				.input{
 					width: 100%;
+					input{
+						width: 96%;
+					}
+				}
+				textarea{
+					width: 96%;
 				}
 				.bottom{
 					heigh:85px;
@@ -235,6 +247,16 @@
 						font-size: 13px!important;
 					}
 				}
+			}
+		}
+	}
+	.tooltiptext{
+		width: 50px!important;
+		left: 20%!important;
+		li{
+			display: block!important;
+			a{
+				padding:0 15px!important;
 			}
 		}
 	}

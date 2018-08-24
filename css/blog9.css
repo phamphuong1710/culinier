@@ -1,25 +1,27 @@
 .related {
   border-bottom: 1px solid #ddd;
-  margin-bottom: 30px; }
-  .related .current_post .post {
-    height: 132px; }
-    .related .current_post .post img {
-      float: left;
-      margin: 20px; }
-    .related .current_post .post .text {
-      margin: 15px 0; }
-      .related .current_post .post .text span {
-        color: #ff9933;
-        font-size: 11px; }
-      .related .current_post .post .text h5 {
-        font-size: 16px;
-        font-weight: bold; }
-      .related .current_post .post .text p {
-        font-size: 12px;
-        color: #666666; }
+  margin-bottom: 30px;
+  margin-top: 55px; }
+  .related .current_post {
+    margin-top: 40px; }
+    .related .current_post .post {
+      height: 140px; }
+      .related .current_post .post img {
+        float: left;
+        margin: 20px; }
+      .related .current_post .post .text {
+        margin: 15px 0; }
+        .related .current_post .post .text span {
+          color: #ff9933;
+          font-size: 11px; }
+        .related .current_post .post .text h5 {
+          font-size: 16px;
+          font-weight: bold; }
+        .related .current_post .post .text p {
+          font-size: 12px;
+          color: #666666; }
 
 .comment {
-  width: 92%;
   margin-top: 50px;
   margin-bottom: 30px; }
   .comment h4 {
@@ -77,7 +79,6 @@
 
 .here {
   clear: both;
-  width: 92%;
   background-color: #f4f4f4;
   padding-top: 40px;
   margin-bottom: 70px;

@@ -1,3 +1,6 @@
+@media screen and (max-width: 1200px) {
+  #avarta:after, #avarta:before {
+    display: none !important; } }
 @media screen and (min-width: 1024px) {
   .list .populor .picture img {
     width: 100%; }
@@ -13,7 +16,7 @@
     top: 25px; }
   .contents .slider .adv .three, .contents .slider .adv .foure {
     bottom: 25px; } }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
   .header .head_menu .logo {
     float: left; }
   .header .head_menu .menu {
@@ -35,7 +38,10 @@
     margin-top: 30px;
     float: right;
     margin-right: 30px;
-    font-size: 20px; }
+    font-size: 20px; } }
+@media screen and (max-width: 850px) {
+  .main {
+    width: 100% !important; }
 
   .slider {
     text-algin: center;
@@ -45,10 +51,6 @@
       width: 65px;
       height: 65px; } }
 @media screen and (max-width: 768px) {
-  .contents .photography .cont, .contents .status .cont, .contents .music1 .cont, .contents .camera2 .cont, .contents .camera3 .cont {
-    background-repeat: repeat;
-    height: auto;
-    padding-bottom: 25px; }
   .contents .comment .no1 .avar {
     width: 18%;
     margin-top: 5px; }
@@ -72,6 +74,10 @@
       font-size: 9px !important; }
   .contents .here form .input {
     width: 100%; }
+    .contents .here form .input input {
+      width: 96%; }
+  .contents .here form textarea {
+    width: 96%; }
   .contents .here form .bottom {
     heigh: 85px; }
     .contents .here form .bottom button {
@@ -125,6 +131,14 @@
     font-size: 10px !important; }
   .related .current_post .post .text h5 {
     font-size: 13px !important; }
+
+  .tooltiptext {
+    width: 50px !important;
+    left: 20% !important; }
+    .tooltiptext li {
+      display: block !important; }
+      .tooltiptext li a {
+        padding: 0 15px !important; }
 
   .here {
     width: 100%;

@@ -1,9 +1,11 @@
 .related{
 	border-bottom: 1px solid #ddd;
 	margin-bottom: 30px;
+	margin-top: 55px;
 	.current_post{
+		margin-top: 40px;
 		.post{
-			height: 132px;
+			height: 140px;
 			img{
 				float: left;
 				margin:20px;
@@ -27,7 +29,6 @@
 	}
 }
 .comment{
-	width: 92%;
 	margin-top: 50px;
 	margin-bottom: 30px;
 	h4{
@@ -104,7 +105,6 @@
 }
 .here{
 	clear: both;
-	width: 92%;
 	background-color: #f4f4f4;
 	padding-top: 40px;
 	margin-bottom: 70px;
